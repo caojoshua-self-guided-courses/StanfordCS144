@@ -2,16 +2,19 @@
 name = cs144
 
 bash:
-	docker exec -it ${name} bash
+	sudo docker exec -it ${name} bash
 
 container:
-	docker run -di --name ${name} --volume $(shell pwd)/StanfordCS144-sponge:/cs144:z ${name}
+	sudo docker run -di --name ${name} --volume $(shell pwd)/StanfordCS144-sponge:/cs144:z ${name}
 
 image:
-	docker build . --tag ${name}
+	sudo docker build . --tag ${name}
+
+start-container:
+	sudo docker start ${name}
 
 clean-container:
-	docker container stop ${name}
-	docker container rm ${name}
+	sudo docker container stop ${name}
+	sudo docker container rm ${name}
 
 
