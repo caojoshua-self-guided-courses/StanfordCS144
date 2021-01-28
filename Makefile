@@ -17,4 +17,10 @@ clean-container:
 	sudo docker container stop ${name}
 	sudo docker container rm ${name}
 
+tags:
+	cd StanfordCS144-sponge && ctags -R .
 
+cscope:
+	cd StanfordCS144-sponge && \
+	find . -name "*.cc" -o -name "*.hh" > cscope.files && \
+	cscope -b -k -q
