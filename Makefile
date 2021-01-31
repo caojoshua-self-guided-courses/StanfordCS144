@@ -6,7 +6,10 @@ bash:
 	sudo docker exec -it ${name} bash
 
 container:
-	sudo docker run -di --name ${name} --volume $(shell pwd)/StanfordCS144-sponge:/home/${user}/cs144:z ${name}
+	sudo docker run -di --name ${name} --cap-add NET_ADMIN \
+		--device /dev/net/tun:/dev/net/tun \
+		--volume $(shell pwd)/StanfordCS144-sponge:/home/${user}/cs144:z \
+		${name}
 
 image:
 	sudo docker build . --tag ${name}
