@@ -4,10 +4,10 @@
 # https://stanford.edu/class/cs144/vm_howto/vm-howto-iso.html#install_packages
 # Adapted for docker purposes (don't run sudo and don't run virtualbox commands).
 
-# if [ -z "$SUDO_USER" ]; then
-#     # if the user didn't call us with sudo, re-execute
-#     exec sudo $0 "$@"
-# fi
+if [ -z "$SUDO_USER" ]; then
+    # if the user didn't call us with sudo, re-execute
+    exec sudo $0 "$@"
+fi
 
 ### update sources and get add-apt-repository
 apt-get update

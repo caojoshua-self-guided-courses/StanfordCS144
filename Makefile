@@ -1,11 +1,12 @@
 # same name for image and container
 name = cs144
+user = user
 
 bash:
 	sudo docker exec -it ${name} bash
 
 container:
-	sudo docker run -di --name ${name} --volume $(shell pwd)/StanfordCS144-sponge:/cs144:z ${name}
+	sudo docker run -di --name ${name} --volume $(shell pwd)/StanfordCS144-sponge:/home/${user}/cs144:z ${name}
 
 image:
 	sudo docker build . --tag ${name}
