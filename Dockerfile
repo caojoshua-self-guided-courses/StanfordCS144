@@ -12,10 +12,16 @@ RUN useradd -ms /bin/bash ${user}
 RUN echo ${user}:${passwd} | chpasswd
 RUN adduser ${user} sudo
 
+# Install tzdata and wireshark and prevent it from asking for input. Would be installed in setup script.
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=America/Los_Angeles
+RUN apt-get install -y tzdata wireshark-common
+
 # Setup script
 ARG setup_script=${user_home}/setup_dev_env.sh
+ARG TZ=America/Los_Angeles
 COPY setup_dev_env.sh ${setup_script}
-RUN chmod +x ${setup_script}
+RUN chmod +x ${setup_script} && ${setup_script}
 
 USER ${user}
 WORKDIR ${user_home}/cs144

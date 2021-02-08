@@ -27,7 +27,7 @@ apt-get -y install build-essential gcc gcc-8 g++ g++-8 cmake libpcap-dev htop jn
                    emacs-nox vim-nox automake pkg-config libtool libtool-bin git tig links     \
                    parallel iptables mahimahi mininet net-tools tcpdump wireshark telnet socat \
                    clang clang-format clang-tidy clang-tools coreutils bash doxygen graphviz   \
-                   virtualbox-guest-utils netcat-openbsd gdb
+                   netcat-openbsd gdb
 
 ## make a sane set of alternatives for gcc, and make gcc-8 the default
 # GCC
