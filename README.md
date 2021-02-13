@@ -16,7 +16,7 @@ make container
 make
 ```
 
-From there, follow the course instructions for building and running the programs. If running into an issue with `iptables`, try manually running `/home/user/cs144/tun.sh restart 144 145`. If that doesn't work, try running the same script in the host. See docs/ for more information.
+From there, follow the course instructions for building and running the programs. If running into an issue with `iptables`, try manually running `/home/user/cs144/tun.sh restart 144 145`. If that doesn't work, try running the same script in the host. See [the environment setup docs](https://github.com/caojoshua/StanfordCS144/blob/master/docs/env_setup.md) for more information.
 
 After exiting the container, you can bash back into it with `make`. Subsequent bash into the container does not require running the setup script. If the container is ever stopped (eg. after reboot), you can restore it with `make start-container`. Run `make clean-container` to clean and remove the container.
 
