@@ -1,7 +1,7 @@
 # StanfordCS144
 Stanford CS 144 Introduction to Computer Networking
 
-I never learned about computer networks, so I will be taking a self-guided course of [Stanford CS 144 Introduction to Computer Networking](https://cs144.github.io/). I will be skimming over lecture notes and completing all the labs. A large portion of the course material is on online quizzes and videos that I don't have access to, so I instead will be selectively reading from Kurose and Ross, *Computer Networking: A Top Down Approach*. I will not be looking at exams.
+I never learned about computer networks, so I will be taking a self-guided course of [Stanford CS 144 Introduction to Computer Networking](https://cs144.github.io/) from Fall 2020. I will be skimming over lecture notes and completing all the labs. A large portion of the course material is on online quizzes and videos that I don't have access to, so I instead will be selectively reading from Kurose and Ross, *Computer Networking: A Top Down Approach*. I will not be looking at exams.
 
 The labs are run from a Docker container. This repository holds the Dockerfile and setup scripts. The labs are contained in a git submodule pointing to [my personal fork of the CS144 lab repository](https://github.com/caojoshua/StanfordCS144-sponge/). `StanfordCS144-sponge` subdirectory is added to the container as a volume, so that changes from a local text editor are propagated into the container.
 
